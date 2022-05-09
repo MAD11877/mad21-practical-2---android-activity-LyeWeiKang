@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         TextView textView2=findViewById(R.id.displaydescription);
         textView2.setText(user1.description);
     }
-    User user1=new User("John","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",3,false);
+    User user1=new User("John","nice",3,false);
 
     public void Click(View view){
         TextView follow=findViewById(R.id.follow);
@@ -31,4 +31,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+        public class User{
+        String name;
+        String description;
+        int id;
+        boolean followed;
+        public User(String n,String d,int i,boolean f){
+            this.name=n;
+            this.description=d;
+            this.id=i;
+            this.followed=f;
+        }
+
     }
+
+
+}
